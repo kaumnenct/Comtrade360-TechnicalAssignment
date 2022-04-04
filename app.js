@@ -38,6 +38,10 @@ app.get("/hello", (req, res) => {
   res.render("helloEndpoint", { message: helloWorldMessage });
 });
 
+app.get("/secure/hello", (req, res) => {
+  res.redirect("/login");
+})
+
 app.get("/add", (req, res) => {
   if (req.oidc.isAuthenticated()) {
     res.render("add");
