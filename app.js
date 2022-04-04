@@ -22,4 +22,8 @@ app.get("/hello", (req, res) => {
   res.render("helloEndpoint", { message: helloWorldMessage });
 });
 
+app.get("/add", (req, res) => {
+    res.render("add");
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
