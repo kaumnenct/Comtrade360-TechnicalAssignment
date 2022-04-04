@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kaumnen/Cometrade360-TechnicalAssignment/issues"
   },
-  "homepage": "https://github.com/kaumnen/Cometrade360-TechnicalAssignment#readme"
+  "homepage": "https://github.com/kaumnen/Cometrade360-TechnicalAssignment#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
