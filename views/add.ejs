@@ -1,4 +1,10 @@
 <%- include('header') %>
-    <p>Add here!</p>
+    <form action="/add" method="post">
+      <label for="language">Language</label>
+      <input type="text" name="language" id="language">
+      <label for="greeting">Greeting</label>
+      <input type="text" name="greeting" id="greeting">
+      <button type="submit">Add new language</button>
+    </form>
   </body>
 </html>
