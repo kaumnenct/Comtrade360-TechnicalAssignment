@@ -1,4 +1,16 @@
 <%- include('header') %>
     <div>Hey! <b><%= loggedInText %></b></div> 
+    <br>
+    <br>
+    <p>Choose a greeting origin:</p>
+    <form action="/greetingOrigin" method="post">
+      <label for="api">API</label>
+      <input type="radio" name="translation" id="api" value="api">
+      <label for="database">Database</label>
+      <input type="radio" name="translation" id="database" value="database">
+      <button type="submit">Submit</button>
+    </form>
+    <br>
+    <p>Greetings are now comming from: <b><%= greetingOrigin %></b></p>
   </body>
 </html>
