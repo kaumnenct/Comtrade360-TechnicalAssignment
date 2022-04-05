@@ -50,12 +50,10 @@ app.get("/hello-rest", (req, res) => {
     }
     translateGreeting(language)
       .then((result) => {
-        res
-          .status(200)
-          .json({
-            message: result.text,
-            info: "This greeting came from an api!",
-          });
+        res.status(200).json({
+          message: result.text,
+          info: "This greeting came from an api!",
+        });
       })
       .catch((error) => {
         res.status(500).json({ message: error });
@@ -67,12 +65,10 @@ app.get("/hello-rest", (req, res) => {
     }
     getLanguage(language)
       .then((result) => {
-        res
-          .status(200)
-          .json({
-            message: result.greeting,
-            info: "This greeting came from a MongoDB!",
-          });
+        res.status(200).json({
+          message: result.greeting,
+          info: "This greeting came from a MongoDB!",
+        });
       })
       .catch((error) => {
         res
@@ -160,7 +156,9 @@ app.post("/add", (req, res) => {
 });
 // #endregion
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(`Server started on port ${PORT}`)
+);
 
 // LOCAL DATABASE LANGUAGES RETRIEVAL
 
