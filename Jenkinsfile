@@ -5,6 +5,7 @@ pipeline {
         stage('Build') { 
             steps {
               echo 'building the app...'
+                sh 'npm install'
             }
         }
           stage('test') { 
